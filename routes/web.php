@@ -12,8 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('includes.sample');
+    return view('admin.admin_home');
 });
 
 Auth::routes();
-

@@ -1,4 +1,5 @@
-@extends('includes.app') @section('content')
+@extends('includes.app') 
+@section('content')
 
 <!--main-container-part-->
 <div id="content">
@@ -14,7 +15,7 @@
     <div class="quick-actions_homepage">
       <ul class="quick-actions">
         <li class="bg_lb"> <a href="index.html"> <i class="icon-dashboard"></i> <span
-              class="label label-important">20</span> My Dashboard </a> </li>
+              class="label label-important">20</span> My Home Dashboard </a> </li>
         <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Charts</a> </li>
         <li class="bg_ly"> <a href="widgets.html"> <i class="icon-inbox"></i><span
               class="label label-success">101</span> Widgets </a> </li>
