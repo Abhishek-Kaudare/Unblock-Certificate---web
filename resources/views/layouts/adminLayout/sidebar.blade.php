@@ -12,7 +12,7 @@
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href={{ url('/status') }} aria-expanded="false">
-                        <i class="fas fa-shopping-status"></i>
+                        <i class="fas fa-thermometer-half"></i>
                         <span class="hide-menu">Status</span>
                     </a>
                     {{-- <ul aria-expanded="false" class="collapse  first-level">
@@ -35,7 +35,7 @@
 
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href={{ url('/certi') }} aria-expanded="false">
-                        <i class="fas fa-certi"></i>
+                        <i class="fas fa-file-alt"></i>
                         <span class="hide-menu">Sample Certificate</span>
                     </a>
                 </li>

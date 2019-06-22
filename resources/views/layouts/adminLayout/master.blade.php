@@ -10,9 +10,13 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('backend_assets/assets/images/favicon.png') }}">
+<<<<<<< HEAD
     <title>
         @yield('title')
     </title>
+=======
+    <title>Unblock Certificates</title>
+>>>>>>> 4b2242f9c29152fa7db60d9215746f36bacbb856
 
     <link rel="stylesheet" type="text/css" href="{{ asset('backend_assets/assets/extra-libs/multicheck/multicheck.css') }}">
     <link href="{{ asset('backend_assets/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css') }}" rel="stylesheet">

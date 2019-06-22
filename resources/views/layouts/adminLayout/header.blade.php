@@ -8,7 +8,7 @@
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{{ url('/') }}">
                 <!-- Logo icon -->
                 <b class="logo-icon p-l-10">
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -20,7 +20,8 @@
                 <!-- Logo text -->
                 <span class="logo-text">
                     <!-- dark Logo text -->
-                    <img src="{{ asset('backend_assets/assets/images/logo-text.png') }}" alt="homepage" class="light-logo" />
+                     {{-- <img src="{{ asset('backend_assets/assets/images/logo.png') }}" alt="" class="light-logo" /> --}}
+                     <h5 class="text-white">Unblock Certis</h5>
 
                 </span>
                 <!-- Logo icon -->
@@ -70,10 +71,9 @@
                         </span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Application</a>
+                        <a class="dropdown-item" href="#">Aadhar Id</a>
+
                     </div>
                 </li>
                 <!-- ============================================================== -->

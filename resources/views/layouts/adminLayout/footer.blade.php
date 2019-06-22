@@ -1,4 +1,4 @@
 <footer class="footer text-center">
-    All Rights Reserved by Matrix-admin. Designed and Developed by
-    <a href="https://wrappixel.com">WrapPixel</a>.
+    All Rights Reserved by UnBlock Subsidy. Designed and Developed by Lord-of-Blocks
+ 
 </footer>
