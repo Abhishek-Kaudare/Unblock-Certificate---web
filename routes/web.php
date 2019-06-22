@@ -12,7 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('admin.admin_home');
+    return view('admin.dashboard');
 });
 
-Auth::routes();
+Route::get('/login', function () {
+    return view('admin.admin_login');
+});
+
+Route::get('/status','Controller@viewstatus');
+
+Route::get('/certi', function () {
+    return view('admin.certi');
+});
+
+Route::get('/add', function () {
+    return view('add');
+});
+
+//
+// Auth::routes();
