@@ -57,7 +57,7 @@
                         <span class="db">
                              <img src="{{ asset('backend_assets/assets/images/logo-icon.png') }}" alt="logo" /> 
                              <br><br>
-                            <h4>USER's LOGIN</h4>
+                            <h4>OFFICER's LOGIN</h4>
                         </span>
                     </div>
                     <!-- Form -->

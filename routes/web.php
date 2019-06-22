@@ -11,9 +11,21 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('admin.dashboard');
-// });
+ Route::get('/', function () {
+     return view('home');
+ });
+
+ Route::get('/officerlogin', function () {
+    return view('officerlogin');
+});
+
+Route::get('/certi', function () {
+    return view('admin.certi');
+});
+
+// Route::get('/pdf','Users@getPdf');
+
+
 
 // Route::get('/login', function () {
 //     return view('admin.admin_login');
@@ -33,7 +45,7 @@
 // // Auth::routes();
 
 
-Route::get('/','homecontroller@home');
+//  Route::get('/','homecontroller@home');
 Route::post('/logout','homecontroller@logout');
 
 

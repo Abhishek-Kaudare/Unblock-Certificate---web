@@ -31,24 +31,24 @@
     <!-- ============================================================== -->
     <div class="row">
         <!-- Column -->
-        <div class="col-md-6 col-lg-2 col-xlg-3">
+        <div class="col-md-6 col-lg-4 col-xlg-3">
             <div class="card card-hover">
-                <div class="box bg-cyan text-center">
+                <div class="box bg-cyan text-left">
                     <h1 class="font-light text-white">
                         <i class="mdi mdi-view-dashboard"></i>
                     </h1>
-                    <h6 class="text-white">Dashboard</h6>
+                    <h6 class="text-white">Document A</h6>
                 </div>
             </div>
         </div>
         <!-- Column -->
         <div class="col-md-6 col-lg-4 col-xlg-3">
             <div class="card card-hover">
-                <div class="box bg-success text-center">
+                <div class="box bg-success text-left">
                     <h1 class="font-light text-white">
                         <i class="mdi mdi-chart-areaspline"></i>
                     </h1>
-                    <h6 class="text-white">Charts</h6>
+                    <h6 class="text-white">Document B</h6>
                 </div>
             </div>
         </div>

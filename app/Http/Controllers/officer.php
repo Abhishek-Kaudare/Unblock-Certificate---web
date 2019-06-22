@@ -18,9 +18,10 @@ class officer extends Controller
     }
     public function getofficerlogin()
     {
-        //
+        return view('officerlogin');
     }
     public function officerlogin()
+
     {
         //
     }
@@ -61,7 +62,8 @@ class officer extends Controller
         //
     }
     public function appliedForA()
+
     {
-        //
+        return view('appliedForA');
     }
 }

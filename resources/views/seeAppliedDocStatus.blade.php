@@ -15,10 +15,10 @@
     <div class="ml-auto text-right">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+                {{-- <li class="breadcrumb-item">
                     <a href="#">Home</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li> --}}
             </ol>
         </nav>
     </div>
@@ -36,24 +36,23 @@
                     <div class="card-body">
                         <div class="card-title">
                             {{-- <h5 >Basic Datatable</h5>
-                            <a href={{ url( '/admin/view-category') }} class="btn btn-info float-right">View Category</a> --}}
-                        </div>
+                            <a href={{ url( '/admin/view-category') }} class="btn btn-info float-right">View Category</a>
+                        </div> --}}
                         <div class="table-responsive">
                             <table id="zero_config" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                 
-                                        <th>Full Name</th>
-                                        <th>Contact</th>
-                                        <th>Email id</th>
-                                        <th>Address Proof</th>
-                                        <th>ID Proof</th>
-                                        <th>Accept User</th>
-                                        <th>Reject User</th>
+                                        <th>Certi Id</th>
+                                        <th>Certi Name</th>
+                                        <th>Status</th>
+                                        <th>Re-apply</th>
+
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($values as $item)
+                                    {{-- @foreach ($values as $item)
                                     <tr>
                                         
                                         
@@ -67,18 +66,9 @@
                                             
                                         
                                     </tr>  
-                                    @endforeach
+                                    @endforeach --}}
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
-                                    </tr>
-                                </tfoot>
+                               
                             </table>
                         </div>
 

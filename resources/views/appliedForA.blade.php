@@ -43,17 +43,18 @@
                                 <thead>
                                     <tr>
                                 
-                                        <th>Full Name</th>
-                                        <th>Contact</th>
-                                        <th>Email id</th>
-                                        <th>Address Proof</th>
-                                        <th>ID Proof</th>
-                                        <th>Accept User</th>
-                                        <th>Reject User</th>
+                                        <th>Name</th>
+                                        <th>Age</th>
+                                        <th>Address</th>
+                                        <th>File Upload 1</th>
+                                        <th>File Upload 2</th>
+                                        <th>Accept</th>
+                                        <th>Reject</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($values as $item)
+                                    {{-- @foreach ($values as $item)
                                     <tr>
                                         
                                         
@@ -67,18 +68,9 @@
                                             
                                         
                                     </tr>  
-                                    @endforeach
+                                    @endforeach --}}
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
-                                    </tr>
-                                </tfoot>
+                               
                             </table>
                         </div>
 
