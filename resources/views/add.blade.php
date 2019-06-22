@@ -11,7 +11,7 @@
 @endsection
 
 
-
+{{-- 
 @section('breadcrumb')
     <h4 class="page-title">Dashboard</h4>
     <div class="ml-auto text-right">
@@ -24,7 +24,7 @@
             </ol>
         </nav>
     </div>
-@endsection
+@endsection --}}
 
 
 
@@ -46,21 +46,32 @@
                     <div class="card-body">
                         <h4 class="card-title">Personal Info</h4>
                         <div class="form-group row">
-                            <label class="col-sm-3 text-right control-label col-form-label" for="fname">First Name</label>
+                            <label class="col-sm-3 text-right control-label col-form-label" for="fname">Name</label>
                             <div class="col-sm-9">
-                                <input class="form-control" id="fname" type="text" placeholder="First Name Here">
+                                <input class="form-control" id="fname" type="text" placeholder="Name Here">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-3 text-right control-label col-form-label" for="lname">Last Name</label>
+                            <label class="col-sm-3 text-right control-label col-form-label" for="lname">Email</label>
                             <div class="col-sm-9">
-                                <input class="form-control" id="lname" type="text" placeholder="Last Name Here">
+                                <input class="form-control" id="lname" type="text" placeholder="Email Here">
                             </div>
                         </div>
 
 
                         <div class="form-group row">
-                            <label class="col-md-3">File Upload</label>
+                            <label class="col-md-3 text-right control-label col-form-label">File Upload</label>
+                            <div class="col-md-9">
+                                <div class="custom-file">
+                                    <input class="custom-file-input" id="validatedCustomFile" required="" type="file">
+                                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 text-right control-label col-form-label">File Upload</label>
                             <div class="col-md-9">
                                 <div class="custom-file">
                                     <input class="custom-file-input" id="validatedCustomFile" required="" type="file">
@@ -71,13 +82,7 @@
                         </div>
 
 
-                        <div class="form-group row">
-                            <label class="col-md-3" for="disabledTextInput">Disabled input</label>
-                            <div class="col-md-9">
-                                <input disabled="" class="form-control" id="disabledTextInput" type="text" placeholder="Disabled input">
-                            </div>
-                        </div>
-
+                        
 
     <!-- ============================================================== -->
     <!-- End PAge Content -->
@@ -119,7 +124,7 @@
 
 
 
-    <script>
+    {{-- <script>
         //***********************************//
         // For select 2
         //***********************************//
@@ -161,7 +166,7 @@
             theme: 'snow'
         });
 
-    </script>
+    </script> --}}
 
 
 
