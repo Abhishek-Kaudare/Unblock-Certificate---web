@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('backend_assets/assets/images/favicon.png') }}">
-    <title>Matrix Template - The Ultimate Multipurpose admin template</title>
+    <title>Login</title>
     <!-- Custom CSS -->
     <link href="{{ asset('backend_assets/dist/css/style.min.css') }}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -55,7 +55,8 @@
                     @endif
                     <div class="text-center p-t-20 p-b-20">
                         <span class="db">
-                            <img src="{{ asset('backend_assets/assets/images/logo.png') }}" alt="logo" />
+                            {{-- <img src="{{ asset('backend_assets/assets/images/logo.png') }}" alt="logo" /> --}}
+                            LORD OF BLOCKS
                         </span>
                     </div>
                     <!-- Form -->

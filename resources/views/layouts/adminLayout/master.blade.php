@@ -12,7 +12,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('backend_assets/assets/images/favicon.png') }}">
     <title>Matrix Template - The Ultimate Multipurpose admin template</title>
 
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend_assets/assets/extra-libs/multicheck/multicheck.css') }}">
+    <link href="{{ asset('backend_assets/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend_assets/dist/css/style.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend_/dist/css/style.min.css') }}" rel="stylesheet">
+    <link href=" {{ asset('assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }} " rel="stylesheet" type="text/css">
+    <link href="  {{ asset('assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }} " rel="stylesheet" type="text/css">
+    <link href=" {{ asset('assets/libs/jquery-minicolors/jquery.minicolors.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('backend_assets/assets/libs/select2/dist/css/select2.min.css') }}" rel="stylesheet" type="text/css">
     @yield('styles')
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
