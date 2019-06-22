@@ -11,26 +11,6 @@
 @endsection
 
 
-{{-- 
-@section('breadcrumb')
-    <h4 class="page-title">Dashboard</h4>
-    <div class="ml-auto text-right">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="#">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">Library</li>
-            </ol>
-        </nav>
-    </div>
-@endsection --}}
-
-
-
-
-
-
 
 
 @section('content')
@@ -42,28 +22,35 @@
     <div class="row">
         <div class="col-md-9">
             <div class="card">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="POST" action="{{ action('Users@registeruser') }}" accept-charset="UTF-8" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+    <input name="_token" type="hidden" value="{{ csrf_token() }}"/> 
                     <div class="card-body">
                         <h4 class="card-title">Personal Info</h4>
                         <div class="form-group row">
-                            <label class="col-sm-3 text-right control-label col-form-label" for="fname">Name</label>
+                            <label class="col-sm-3 text-right control-label col-form-label" for="fname">Full Name</label>
                             <div class="col-sm-9">
-                                <input class="form-control" id="fname" type="text" placeholder="Name Here">
+                                <input class="form-control" id="fname" name="fullname" type="text" placeholder="Name Here">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-3 text-right control-label col-form-label" for="lname">Email</label>
                             <div class="col-sm-9">
-                                <input class="form-control" id="lname" type="text" placeholder="Email Here">
+                                <input class="form-control" id="lname" name="email" type="text" placeholder="Email Here">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="lname">Contact</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" id="lname" name="con1" type="text" placeholder="Contact Here">
                             </div>
                         </div>
 
-
                         <div class="form-group row">
-                            <label class="col-md-3 text-right control-label col-form-label">File Upload</label>
+                            <label class="col-md-3 text-right control-label col-form-label">Address Proof Upload</label>
                             <div class="col-md-9">
                                 <div class="custom-file">
-                                    <input class="custom-file-input" id="validatedCustomFile" required="" type="file">
+                                    <input class="custom-file-input" id="validatedCustomFile" name="addprof" required="" type="file">
                                     <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                                     <div class="invalid-feedback">Example invalid custom file feedback</div>
                                 </div>
@@ -74,10 +61,20 @@
                             <label class="col-md-3 text-right control-label col-form-label">File Upload</label>
                             <div class="col-md-9">
                                 <div class="custom-file">
-                                    <input class="custom-file-input" id="validatedCustomFile" required="" type="file">
+                                    <input class="custom-file-input" id="validatedCustomFile" name="idprof" required="" type="file">
                                     <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                                     <div class="invalid-feedback">Example invalid custom file feedback</div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 text-right control-label col-form-label"></label>
+                            <div class="col-md-9">
+                                
+                                    <button type="submit" placeholder="submit">SUBMIT
+                                    
+                                    
+                                
                             </div>
                         </div>
 
