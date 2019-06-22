@@ -17,7 +17,7 @@ class Users extends Controller
     }
      public function getuseregisteruser()
     {
-        //
+        return view('add');
     }
      public function registeruser()
     {

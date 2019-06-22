@@ -38,17 +38,17 @@ Route::post('/logout','homecontroller@logout');
 
 
 
-Route::get('/show-all-uploaded-docs','user@showAllDocs');
-Route::get('/show-all-certificates','user@showAllcerti');
-Route::get('/userregister','user@getuseregisteruser');
-Route::post('/userregister','user@registeruser');
-Route::get('/userlogin','user@getuserlogin');
-Route::post('/userlogin','user@userlogin');
-Route::get('/user-home-screen','user@getUserHomeScreen');
-Route::get('/applyA','user@getDocA');
-Route::post('/applyA','user@DocA');
-Route::get('/see-applied-docs-status','user@seeAppliedDocsStatus');
-Route::post('/re-apply/{appid}','user@reApply');
+Route::get('/show-all-uploaded-docs','Users@showAllDocs');
+Route::get('/show-all-certificates','Users@showAllcerti');
+Route::get('/userregister','Users@getuseregisteruser');
+Route::post('/userregister','Users@registeruser');
+Route::get('/userlogin','Users@getuserlogin');
+Route::post('/userlogin','Users@userlogin');
+Route::get('/user-home-screen','Users@getUserHomeScreen');
+Route::get('/applyA','Users@getDocA');
+Route::post('/applyA','Users@DocA');
+Route::get('/see-applied-docs-status','Users@seeAppliedDocsStatus');
+Route::post('/re-apply/{appid}','Users@reApply');
 
 
 Route::get('/loginofficer','officer@getofficerlogin');
