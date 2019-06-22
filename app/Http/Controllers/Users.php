@@ -69,25 +69,50 @@ class Users extends Controller
     {
         return view('docAapply');
     }
-     public function DocA()
+     public function DocA(Request $request)
     {
-        //
+            
+            $fullname = $request->fullname;
+            $email    = $request->age;
+            $con1     = $request->add;
+            if($request->hasFile('fileA')){
+            if (Input::file('fileA')->isValid()) {
+                $file = Input::file('fileA');
+                $destination = storage_path('/');
+                $ext= $file->getClientOriginalExtension();
+                $mainFilename = str_random(6).'.'.time();
+                $fileA = $fullname.'fileA'.'.'.$ext;
+                $file->move($destination, $fileA);
+            }
+            }
+
+
+            
+            if($request->hasFile('fileB')){
+            if (Input::file('fileB')->isValid()) {
+                $file = Input::file('fileB');
+                $destination = storage_path('/');
+                $ext= $file->getClientOriginalExtension();
+                $mainFilename = str_random(6).'.'.time();
+                $fileB = $fullname.'fileA'.'.'.$ext;
+                $file->move($destination, $fileB);
+            }
+    }
+    DB::insert("INSERT INTO `applications`(`full_name`,`app_id`, `user_Id`, `certi_id`, `stat`,`fileA`,`fileB`,`age`,`add`) VALUES ('$fullname',null,14,1,0,'$fileA','$fileB','$email','$con1')");
+        return view('docAapply');
+
     }
      public function seeAppliedDocsStatus()
     {
-        return view('seeAppliedDocStatus');
+        $values = DB::select("select * from applications where `stat = 0");
+        return view('seeAppliedDocStatus')->with('values',$values);    
     }
      public function reApply()
     {
         //
     }
 
-    // public function getPdf($id=null)
-    //  {
-    //         $invoice = PDF::loadView('pdf.pdf_bill');
-    //         return $invoice->stream();
 
-    //     }
 
 
 

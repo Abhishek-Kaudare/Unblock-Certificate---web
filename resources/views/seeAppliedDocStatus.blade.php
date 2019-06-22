@@ -52,7 +52,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($values as $item)
+                                    @foreach ($values as $item)
                                     <tr>
                                         
                                         
@@ -66,7 +66,7 @@
                                             
                                         
                                     </tr>  
-                                    @endforeach --}}
+                                    @endforeach
                                 </tbody>
                                
                             </table>

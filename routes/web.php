@@ -75,11 +75,11 @@ Route::get('/new-user-application','officer@getNewUserApplication');
 Route::post('/new-user-application','officer@NewUserApplication');
 // routes to view pdf of doc A
 
-Route::get('/viewB/{A}','officer@addprofA');
-Route::get('/viewA/{B}','officer@idprofA');
+Route::get('/viewB/{A}','officer@viewA');
+Route::get('/viewA/{B}','officer@viewB');
 
-Route::post('/accept-application/{appid}','officer@acceptDoc');
-Route::post('/reject-application/{appid}','officer@rejectDoc');
+Route::get('/accept-application/{appid}/{uid}','officer@acceptDoc');
+Route::get('/reject-application/{appid}/{uid}','officer@rejectDoc');
 
 
 

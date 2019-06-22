@@ -42,19 +42,21 @@
     <div class="row">
         <div class="col-md-9">
             <div class="card">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="POST" action="{{ action('Users@DocA') }}" accept-charset="UTF-8" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+    <input name="_token" type="hidden" value="{{ csrf_token() }}"/> 
                     <div class="card-body">
                         <h4 class="card-title">Apply For DocA</h4>
                         <div class="form-group row">
                             <label class="col-sm-3 text-right control-label col-form-label" for="fname">Name</label>
                             <div class="col-sm-9">
-                                <input class="form-control" id="fname" type="text" placeholder="Name Here">
+                                <input class="form-control" id="fname" name="fullname" type="text" placeholder="Name Here">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-3 text-right control-label col-form-label" for="age">Age</label>
                             <div class="col-sm-9">
-                                <input class="form-control" id="age" type="number" placeholder="Age Here">
+                                <input class="form-control" id="age" name="age" type="number" placeholder="Age Here">
                             </div>
                         </div>
 
@@ -62,7 +64,7 @@
                         <div class="form-group row">
                             <label class="col-sm-3 text-right control-label col-form-label" for="ad">Address</label>
                             <div class="col-sm-9">
-                                <textarea class="form-control" id="address" type ="text" placeholder = "Address Here"></textarea>
+                                <textarea class="form-control" id="address" name="add" type ="text" placeholder = "Address Here"></textarea>
                             </div>
                         </div>
 
@@ -71,7 +73,7 @@
                             <label class="col-md-3 text-right control-label col-form-label">File Upload 1</label>
                             <div class="col-md-9">
                                 <div class="custom-file">
-                                    <input class="custom-file-input" id="validatedCustomFile" required="" type="file">
+                                    <input class="custom-file-input" id="validatedCustomFile" name="fileA" required="" type="file">
                                     <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                                     <div class="invalid-feedback">Example invalid custom file feedback</div>
                                 </div>
@@ -82,7 +84,7 @@
                             <label class="col-md-3 text-right control-label col-form-label">File Upload 2</label>
                             <div class="col-md-9">
                                 <div class="custom-file">
-                                    <input class="custom-file-input" id="validatedCustomFile" required="" type="file">
+                                    <input class="custom-file-input" name="fileB" id="validatedCustomFile" required="" type="file">
                                     <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                                     <div class="invalid-feedback">Example invalid custom file feedback</div>
                                 </div>
@@ -94,7 +96,7 @@
                         
                         <div class="border-top">
                             <div class="card-body">
-                                <button class="btn btn-primary" type="button">Submit</button>
+                                <button class="btn btn-primary" type="submit">Submit</button>
                             </div>
                         </div>
 

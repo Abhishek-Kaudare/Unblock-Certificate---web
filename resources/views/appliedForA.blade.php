@@ -54,21 +54,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($values as $item)
+                                    @foreach ($values as $item)
                                     <tr>
                                         
                                         
                                         <td>{{$item->full_name}}</td>
-                                        <td>{{$item->contact_1}}</td>
-                                        <td>{{$item->email}}</td>
-                                        <td id=""><a class="btn btn-primary" href="viewaddressproof/{{$item->addprof}}">View Address Proof</a></td>
-                                        <td id=""><a class="btn btn-primary" href="viewidproof/{{$item->idprof}}">View ID Proof</a></td>
-                                        <td id=""><a class="btn btn-success" href="accpetuser/{{$item->user_Id}}">Accept User</a></td>
-                                        <td id=""><a class="btn btn-danger" href="rejectuser/{{$item->user_Id}}">Reject User</a></td>
+                                        <td>{{$item->age}}</td>
+                                        <td>{{$item->add}}</td>
+                                        <td id=""><a class="btn btn-primary" href="viewA/{{$item->fileA}}">File A</a></td>
+                                        <td id=""><a class="btn btn-primary" href="viewB/{{$item->fileB}}">File B</a></td>
+                                        <td id=""><a class="btn btn-success" href="accept-application/{{$item->app_id}}/{{$item->user_Id}}">Accept User</a></td>
+                                        <td id=""><a class="btn btn-danger" href="reject-application/{{$item->app_id}}/{{$item->user_Id}}">Reject User</a></td>
                                             
                                         
                                     </tr>  
-                                    @endforeach --}}
+                                    @endforeach
                                 </tbody>
                                
                             </table>
