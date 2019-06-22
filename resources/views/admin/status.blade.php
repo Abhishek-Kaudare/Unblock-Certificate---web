@@ -42,30 +42,28 @@
                             <table id="zero_config" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>PRN</th>
                                 
                                         <th>Full Name</th>
-                                        <th>Gender</th>
                                         <th>Contact</th>
-                                        <th>Address</th>
-                                        <th>Date Of Birth</th>
                                         <th>Email id</th>
                                         <th>Address Proof</th>
+                                        <th>ID Proof</th>
+                                        <th>Accept User</th>
+                                        <th>Reject User</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($values as $item)
                                     <tr>
                                         
-                                        <td>{{$item->PRN}}</td>
                                         
                                         <td>{{$item->full_name}}</td>
-                                        <td>{{$item->gender}}</td>
                                         <td>{{$item->contact_1}}</td>
-                                        <td>{{$item->address}}</td>
-                                        <td>{{$item->dob}}</td>
                                         <td>{{$item->email}}</td>
-                                        <td>{{$item->addprof}}</td>
+                                        <td id=""><a class="btn btn-primary" href="viewaddressproof/{{$item->addprof}}">View Address Proof</a></td>
+                                        <td id=""><a class="btn btn-primary" href="viewidproof/{{$item->idprof}}">View ID Proof</a></td>
+                                        <td id=""><a class="btn btn-success" href="accpetuser/{{$item->user_Id}}">Accept User</a></td>
+                                        <td id=""><a class="btn btn-danger" href="rejectuser/{{$item->user_Id}}">Reject User</a></td>
                                             
                                         
                                     </tr>  
@@ -118,3 +116,7 @@
 
 @endsection
 
+
+@section('title')
+    New Users Applications
+@endsection
