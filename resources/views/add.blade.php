@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('backend_assets/assets/extra-libs/multicheck/multicheck.css') }}">
     <link href="{{ asset('backend_assets/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css') }}" rel="stylesheet">
     <link href="{{ asset('backend_assets/dist/css/style.min.css') }}" rel="stylesheet">
-    <link href=""{{ asset('backend_assets/assets/libs/select2/dist/css/select2.min.') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('backend_assets/assets/libs/select2/dist/css/select2.min.') }}" rel="stylesheet" type="text/css">
 @endsection
 
 
