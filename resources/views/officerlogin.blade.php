@@ -60,8 +60,8 @@
                             <h4>OFFICER's LOGIN</h4>
                         </span>
                     </div>
-                    <!-- Form -->
-                    <form class="form-horizontal m-t-20" method="post" action="{{ url('admin') }}">{{ csrf_field() }}
+                    <form >
+                    {{-- <form class="form-horizontal m-t-20" method="post" action="{{ url('new-user-application') }}">{{ csrf_field() }} --}}
                         <div class="row p-b-30">
                             <div class="col-12">
                                 <div class="input-group mb-3">
@@ -70,7 +70,7 @@
                                             <i class="ti-user"></i>
                                         </span>
                                     </div>
-                                    <input type="email" class="form-control form-control-lg" name="email" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1"
+                                    <input type="text" class="form-control form-control-lg" name="email" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1"
                                         required="">
                                 </div>
                                 <div class="input-group mb-3">
@@ -117,7 +117,7 @@
                             <div class="row m-t-20 p-t-20 border-top border-secondary">
                                 <div class="col-12">
                                     <a class="btn btn-success" href="#" id="to-login" name="action">Back To Login</a>
-                                    <button class="btn btn-info float-right" type="button" name="action">Recover</button>
+                                    <button class="btn btn-info float-right" onclick="location.href='{{ url('/new-user-application') }}' type="button" name="action">Recover</button>
                                 </div>
                             </div>
                         </form>

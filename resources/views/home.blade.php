@@ -50,7 +50,7 @@
 
                    <div class="border-top">
                     <div class="card-body">
-                        <button class="btn btn-primary" type="button">Apply</button>
+                        <button class="btn btn-primary" type="button" onclick="window.location='{{ url('/applyA') }}'">Apply</button>
                     </div>
                 </div>
 
@@ -78,7 +78,7 @@
 
                <div class="border-top">
                 <div class="card-body">
-                    <button class="btn btn-primary" type="button">Apply</button>
+                    <button class="btn btn-primary" type="button" href={{url('/applyA')}}>Apply</button>
                 </div>
             </div>
 

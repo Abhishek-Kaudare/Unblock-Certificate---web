@@ -1,5 +1,5 @@
 <?php
-
+use GuzzleHttp\Client;
 namespace App\Http\Controllers;
 use DB;
 use App\r;
@@ -7,8 +7,12 @@ use Illuminate\Http\Request;
 use Response;
 use Mail;
 use App\Mail\TestEmail;
+// require 'vendor/autoload.php';
+use GuzzleHttp\Client;
 
 
+use GuzzleHttp;
+use GuzzleHttp\Subscriber\Oauth\Oauth1;
 
 class officer extends Controller
 {
@@ -28,7 +32,7 @@ class officer extends Controller
     public function officerlogin()
 
     {
-        //
+        return view("appliedForA");
     }
     public function addprof($path){
     
@@ -80,8 +84,19 @@ class officer extends Controller
 
             Mail::to($to_email)->send(new TestEmail($data));
 
+            $client = new GuzzleHttp\Client();
+                            
+            $URI = 'http://localhost:3000/api/addUser';
 
-        return view('admin.newuserapp')->with('values',$val);
+            $params['body'] = array('$class'=> "org.unblockcerti.participant.user.addUser",
+                                "userName"=> $values[0]->full_name,
+                                "phoneNo"=> $values[0]->contact_1,
+                                "address"=> $values[0]->email,
+                                "prn"=> $PRN,
+                                "timestamp"=> date("Y-m-d h:i:s a", time()));
+            $response = $client->post($URI, $params);
+            return redirect('new-user-application')->with('values',$values);
+
     }
     public function reject($userid)
     {
@@ -144,7 +159,27 @@ class officer extends Controller
 
 
         $f = DB::select("select * from applications where stat = 0");
-        // return view('admin.newuserapp')->with('values',$values);    
+    
+
+        
+
+        $client = new GuzzleHttp\Client();
+                            
+            $URI = 'http://localhost:3000/api/addCerti';
+
+            $params['body'] = array('$class'=> "org.unblockcerti.user.certificate.addCerti",
+                                "certiId"=> 1,
+                                "applicationId"=> $appid,
+                                "field1"=> $f[0]->fileA,
+                                "field2"=> $f[0]->fileB,
+                                "timestamp"=> date("Y-m-d h:i:s a", time()));
+            $response = $client->post($URI, $params);
+
+            {
+
+}
+
+
         return redirect('application-for-docA')->with('values',$f);
 
 

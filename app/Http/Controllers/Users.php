@@ -1,15 +1,27 @@
 <?php
-
+use GuzzleHttp\Client;
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+
+use GuzzleHttp\Client;
+
+
+use GuzzleHttp;
+use GuzzleHttp\Subscriber\Oauth\Oauth1;
+
+
 class Users extends Controller
 {
-     
+     public function home($id)
+    {
+        return view('home');
+    }
+
      public function showAllDocs()
     {
-        //
+        
     }
      public function showAllcerti()
     {
@@ -57,9 +69,14 @@ class Users extends Controller
     {
         return view('admin.admin_login');
     }
-     public function userlogin()
-    {
-        // return view('admin.admin_login');
+     public function userlogin(Request $request){
+
+     $PRN = $request->prn;
+     $pass = $request->password;
+    
+    $f = DB::select("select * from users where PRN ='$PRN' AND password ='$pass'");
+        $id = $f[0]->user_Id;
+        return redirect("/$id");
     }
      public function getUserHomeScreen()
     {
@@ -94,12 +111,34 @@ class Users extends Controller
                 $destination = storage_path('/');
                 $ext= $file->getClientOriginalExtension();
                 $mainFilename = str_random(6).'.'.time();
-                $fileB = $fullname.'fileA'.'.'.$ext;
+                $fileB = $fullname.'fileB'.'.'.$ext;
                 $file->move($destination, $fileB);
             }
     }
     DB::insert("INSERT INTO `applications`(`full_name`,`app_id`, `user_Id`, `certi_id`, `stat`,`fileA`,`fileB`,`age`,`add`) VALUES ('$fullname',null,14,1,0,'$fileA','$fileB','$email','$con1')");
-        return view('docAapply');
+
+
+    
+ 
+
+    
+            $client = new GuzzleHttp\Client();
+                            
+            $URI = 'http://localhost:3000/api/submitApplication';
+
+            $params['body'] = array(
+                '$class'=> "org.unblockcerti.user.application.submitApplication",
+                                "applicationId"=> 5,
+                                "fullName"=> $request->fullname,
+                                "age"=> $request->age,
+                                "address"=> $request->add,
+                                "document1path"=> $fileA,
+                                "document2path"=> $fileB,
+                                "status"=> 0,
+                                "timestamp"=> date("Y-m-d h:i:s a", time()));
+            $response = $client->post($URI, $params);
+
+return redirect('/');
 
     }
      public function seeAppliedDocsStatus()
